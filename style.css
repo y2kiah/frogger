@@ -1,0 +1,100 @@
+#board {
+    position: absolute;
+    margin: auto;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    z-index: 5;
+    color: white;
+    position: relative;
+}
+
+.frog {
+    position: absolute;
+    z-index: 3;
+}
+
+.squashed {
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.car {
+    position: absolute;
+    z-index: 4;
+}
+
+.car.left {
+    transform: rotate(180deg);
+}
+
+.pattern {
+    display: none;
+    border-left: 2px solid black;
+    opacity: 0.5;
+}
+
+.road {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: url("road.png");
+    background-repeat: repeat;
+}
+.road.left {
+    transform: scaleY(-1);
+}
+
+.sidewalk {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: url("sidewalk.png");
+    background-repeat: repeat;
+}
+.sidewalk.down {
+    transform: scaleY(-1);
+}
+.river {
+    position: absolute;
+    left: 0;
+    background-color: blue;
+}
+
+.log {
+    position: absolute;
+    z-index: 1;
+    background-image: url('log.png');
+    background-repeat: repeat-x;
+    transform: translate3d(0, 0, 0);
+}
+
+.turtle {
+    position: absolute;
+    z-index: 1;
+    background-image: url('turtle.png');
+    background-repeat: repeat-x;
+    transform: translate3d(0, 0, 0);
+}
+.turtle.left {
+    transform: matrix3d(-1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1);
+}
+
+.bridge {
+    position: absolute;
+    background-color: darkred;
+}
+
+.target {
+    position: absolute;
+    z-index: 2;
+    border-radius: 20px 20px 0 0;
+    background-color: darkslategrey;
+}
